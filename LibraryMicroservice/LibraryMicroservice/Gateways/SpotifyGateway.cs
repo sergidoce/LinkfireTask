@@ -43,7 +43,7 @@ namespace LibraryMicroservice.Gateways
             {
                 foreach(SimpleAlbum album in response.Albums.Items)
                 {
-                    result.Add(new AlbumDTO(album.Id, album.Name, album.Artists[0].Name, album.Images[0].Url, album.Uri));
+                    result.Add(new AlbumDTO(album.Id, album.Name, album.Artists[0].Name, album.Images[0].Url, album.ExternalUrls["spotify"]));
                 }
             }
             return result;
