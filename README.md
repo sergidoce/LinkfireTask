@@ -16,7 +16,7 @@ The steps to build and run the test project are the following:
 2. Run the command `dotnet restore` and `dotnet build`.
 3. Run the command `dotnet test` to execute the tests.
 
-You are naturally welcomed to open the solution using Visual Studio 2022 and interact with the project using the IDE.
+You are naturally welcomed to open the solution using Visual Studio 2022 and interact with the project using the IDE. To test the endpoints, please be aware that only two users exist with ID's 1 and 2, which means that you need to use these two ID's in the endpoints. Also be aware that albums are identified by the spotify id, so to delete one from the library you will need to reference it using that ID (which can be easily known using the endpoint to find albums in the Spotify API).
  
 
 ## Software design and software principles behind the architecture
