@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryMicroservice.Controllers
 {
+
+    // The Albums Controller gets the requests to find albums using external API's 
+
     [Route("api/albums")]
     [ApiController]
     public class AlbumController : ControllerBase
@@ -18,6 +21,9 @@ namespace LibraryMicroservice.Controllers
             _albumService = albumService;
         }
 
+        // I know it is a bad practice to use verbs in REST endpoints, but I thought using simply the GET terminology would
+        // be confusing because we don't get or find albums in our own storage, we use external providers. Also this method can
+        // return no result.
         [HttpGet]
         [Route("/find")]
         public async Task<IActionResult> SearchForAlbum([FromQuery] string? name, [FromQuery] string? artist)

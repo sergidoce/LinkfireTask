@@ -2,12 +2,17 @@
 
 namespace LibraryMicroservice.Repositories
 {
+
+    /* The repositories classes are classes that interact with the data. In this case they also store the data because
+     * I haven't used a database system for the task. Each repository has a list of model instances representing a table
+     * in the database */
     public class UsersRepository : IUsersRepository
     {
         private List<User> _users;
 
         public UsersRepository()
         {
+            // I initialize the list with some values because functionality to create users is not implemented.
             _users = new List<User>()
             {
                 new User(1, "Agnes"),

@@ -2,8 +2,15 @@
 {
     public class User
     {
+        /* Even though the task mentioned that Users only had a library and a name, I decided to add an Id field because
+         * this is how a database would be structured and designed
+         */
         public int Id { get; set; }
         public string Name { get; set; }
+
+        /* The library is a list and doesn't have it's own class because we assume that a User can only have one library.
+         * It is a list of string because it stores foreign keys to the Albums Repository. This is to avoid data dupplication.
+         */
         public List<string>? AlbumLibrary { get; set; }
 
         public User(int id, string name)

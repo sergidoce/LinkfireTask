@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryMicroservice.Controllers
 {
+    
+    //The User Controller gets the requests to interact with a user's album library.
+     
     [Route("api/users")]
     [ApiController]
     public class UserController : ControllerBase
@@ -12,6 +15,7 @@ namespace LibraryMicroservice.Controllers
         private readonly ILogger<UserController> _logger;
         private IUserService _userService;
 
+        //I inject the dependencies for the controller using the Dependency Injection.
         public UserController(ILogger<UserController> logger, IUserService userService)
         {
             _userService = userService;
